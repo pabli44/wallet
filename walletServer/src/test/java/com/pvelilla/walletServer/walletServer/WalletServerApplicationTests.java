@@ -40,62 +40,62 @@ public class WalletServerApplicationTests {
     }
 	
 	@Test
-	public void test1() {
+	public void test1() throws InterruptedException {
 		
 	}
 	
 	@Test
-	public void test2() {
+	public void test2() throws InterruptedException {
 		
 	}
 	
 	@Test
-	public void test3() {
+	public void test3() throws InterruptedException {
 		
 	}
 	
 	@Test
-	public void test4() {
+	public void test4() throws InterruptedException {
 		
 	}
 	
 	@Test
-	public void test5() {
+	public void test5() throws InterruptedException {
 		
 	}
 	
 	@Test
-	public void test6() {
+	public void test6() throws InterruptedException {
 		
 	}
 	
 	@Test
-	public void test7() {
+	public void test7() throws InterruptedException {
 		
 	}
 	
 	@Test
-	public void test8() {
+	public void test8() throws InterruptedException {
 		
 	}
 	
 	@Test
-	public void test9() {
+	public void test9() throws InterruptedException {
 		
 	}
 	
 	@Test
-	public void test10() {
+	public void test10() throws InterruptedException {
 		
 	}
 	
 	@Test
-	public void test11() {
+	public void test11() throws InterruptedException {
 		
 	}
 	
 	@Test
-	public void test12() {
+	public void test12() throws InterruptedException {
 		
 	}
 
