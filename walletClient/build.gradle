@@ -4,6 +4,7 @@ plugins {
 }
 
 apply plugin: 'io.spring.dependency-management'
+apply plugin: 'maven'
 
 group = 'com.pvelilla.walletClient'
 version = '0.0.1-SNAPSHOT'
@@ -16,6 +17,8 @@ repositories {
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-data-rest'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
+	compile("net.devh:grpc-client-spring-boot-starter:${springBootGrpcVersion}")
+	//compile project(':bp-wallet-proto')
 	runtimeOnly 'mysql:mysql-connector-java'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }

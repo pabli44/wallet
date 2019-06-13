@@ -1,6 +1,5 @@
 package com.pvelilla.walletServer.walletServer;
 
-import java.util.Map;
 import java.util.concurrent.ExecutionException;
 
 import org.junit.Test;

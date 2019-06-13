@@ -1,0 +1,49 @@
+syntax = "proto3";
+
+
+enum STATUS { 
+	OK_TRANSACTION = 0;
+	ERR_TRANSACTION = 1;
+}
+
+
+enum OPERATION{
+	DEPOSIT = 1;
+	WITHDRAW = 2;
+	BALANCE = 3;
+} 
+
+
+enum CURRENCY {
+	USD = 0;
+	EUR =1;
+	GBP = 2;
+}
+
+
+message Request{
+	int64 userId = 1;
+	int64 amount = 2;
+	CURRENCY currency = 3;
+}
+
+message Response{
+	STATUS status = 1;
+	string statusMessage = 2;
+	OPERATION operation = 3;
+}
+
+enum StatusMessage{
+	USER_DOES_NOT_EXIST = 0;
+	INVALID_ARGUMENTS = 1;
+	INSUFFICIENT_BALANCE = 2;
+	AMOUNT_SHOULD_BE_GREATER_THAN_ZERO = 3;
+	INVALID_CURRENCY = 4;
+ }
+
+
+service WalletService {
+	rpc deposit(Request) returns (Response) {}
+	rpc withdraw(Request) returns (Response) {}
+	rpc getBalance(Request) returns (Response) {}
+}
