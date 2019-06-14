@@ -10,13 +10,14 @@ import org.springframework.core.SpringVersion;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import com.pvelilla.walletServer.walletServer.service.IOperationService;
+import com.pvelilla.walletServer.walletServer.service.OperationService;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class WalletServerApplicationTests {
 
 	@Autowired
-	private IOperationService iOperationService;
+	private OperationService operationService;
 
 	
 	@Test
@@ -47,65 +48,62 @@ public class WalletServerApplicationTests {
 	
 	@Test
 	public void test1() throws ExecutionException, InterruptedException {
-		iOperationService.withdraw(new Long(1), IOperationService.AMOUNT_200, IOperationService.CURRENCY_USD);
+		operationService.withdraw(new Long(1), IOperationService.AMOUNT_200, IOperationService.CURRENCY_USD);
 	}
 	
 	@Test
 	public void test2() throws ExecutionException, InterruptedException {
-		iOperationService.deposit(new Long(1),  IOperationService.AMOUNT_100, IOperationService.CURRENCY_USD);
-		System.out.println("deposit");
+		operationService.deposit(new Long(1),  IOperationService.AMOUNT_100, IOperationService.CURRENCY_USD);
 	}
 	
 	@Test
 	public void test3() throws ExecutionException, InterruptedException {
-		iOperationService.getBalance(new Long(1));
+		operationService.getBalance(new Long(1));
 	}
 	
 	@Test
 	public void test4() throws ExecutionException, InterruptedException {
-		iOperationService.withdraw(new Long(1), IOperationService.AMOUNT_200, IOperationService.CURRENCY_USD);
+		operationService.withdraw(new Long(1), IOperationService.AMOUNT_200, IOperationService.CURRENCY_USD);
 	}
 	
 	@Test
 	public void test5() throws ExecutionException, InterruptedException {
-		iOperationService.deposit(new Long(1),  IOperationService.AMOUNT_100, IOperationService.CURRENCY_EUR);
-		System.out.println("deposit");
+		operationService.deposit(new Long(1),  IOperationService.AMOUNT_100, IOperationService.CURRENCY_EUR);
 	}
 	
 	@Test
 	public void test6() throws ExecutionException, InterruptedException {
-		iOperationService.getBalance(new Long(1));
+		operationService.getBalance(new Long(1));
 	}
 	
 	@Test
 	public void test7() throws ExecutionException, InterruptedException {
-		iOperationService.withdraw(new Long(1), IOperationService.AMOUNT_200, IOperationService.CURRENCY_USD);
+		operationService.withdraw(new Long(1), IOperationService.AMOUNT_200, IOperationService.CURRENCY_USD);
 	}
 	
 	@Test
 	public void test8() throws ExecutionException, InterruptedException {
-		iOperationService.deposit(new Long(1),  IOperationService.AMOUNT_100, IOperationService.CURRENCY_USD);
-		System.out.println("deposit");
+		operationService.deposit(new Long(1),  IOperationService.AMOUNT_100, IOperationService.CURRENCY_USD);
 	}
 	
 	@Test
 	public void test9() throws ExecutionException, InterruptedException {
-		iOperationService.getBalance(new Long(1));
+		operationService.getBalance(new Long(1));
 	}
 	
 	@Test
 	public void test10() throws ExecutionException, InterruptedException {
-		iOperationService.withdraw(new Long(1), IOperationService.AMOUNT_200, IOperationService.CURRENCY_USD);
+		operationService.withdraw(new Long(1), IOperationService.AMOUNT_200, IOperationService.CURRENCY_USD);
 	}
 	
 	@Test
 	public void test11() throws ExecutionException, InterruptedException {
-		iOperationService.getBalance(new Long(1));
+		operationService.getBalance(new Long(1));
 	}
 	
 	@Test
 	public void test12() throws ExecutionException, InterruptedException {
-		iOperationService.withdraw(new Long(1), IOperationService.AMOUNT_200, IOperationService.CURRENCY_USD);
+		operationService.withdraw(new Long(1), IOperationService.AMOUNT_200, IOperationService.CURRENCY_USD);
 		
 	}
 
