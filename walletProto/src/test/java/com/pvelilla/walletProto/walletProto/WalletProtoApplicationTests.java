@@ -1,4 +1,4 @@
-package com.pvelilla.walletClient.walletClient;
+package com.pvelilla.walletProto.walletProto;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -7,13 +7,10 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class WalletClientApplicationTests {
+public class WalletProtoApplicationTests {
 
 	@Test
 	public void contextLoads() {
-		System.out.println("Test Wallet Client");
-		
-		
 	}
 
 }

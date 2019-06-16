@@ -3,5 +3,4 @@ pluginManagement {
 		gradlePluginPortal()
 	}
 }
-rootProject.name = 'walletClient'
-include "WalletProto"
+rootProject.name = 'walletProto'

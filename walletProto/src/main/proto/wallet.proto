@@ -1,5 +1,9 @@
 syntax = "proto3";
 
+option java_multiple_files = true;
+option java_package = "com.pvelilla.walletProto.proto";
+option java_outer_classname = "WalletProtoClass";
+option objc_class_prefix = "WC";
 
 enum STATUS { 
 	OK_TRANSACTION = 0;
@@ -8,9 +12,9 @@ enum STATUS {
 
 
 enum OPERATION{
-	DEPOSIT = 1;
-	WITHDRAW = 2;
-	BALANCE = 3;
+	DEPOSIT = 0;
+	WITHDRAW = 1;
+	BALANCE = 2;
 } 
 
 
@@ -19,6 +23,14 @@ enum CURRENCY {
 	EUR = 1;
 	GBP = 2;
 }
+
+enum StatusMessage{
+	USER_DOES_NOT_EXIST = 0;
+	INVALID_ARGUMENTS = 1;
+	INSUFFICIENT_BALANCE = 2;
+	AMOUNT_SHOULD_BE_GREATER_THAN_ZERO = 3;
+	INVALID_CURRENCY = 4;
+ }
 
 
 message Request{
@@ -31,17 +43,7 @@ message APIResponse{
 	STATUS status = 1;
 	string statusMessage = 2;
 	OPERATION operation = 3;
-	string hello = "Hello from GRPC";
 }
-
-enum StatusMessage{
-	USER_DOES_NOT_EXIST = 0;
-	INVALID_ARGUMENTS = 1;
-	INSUFFICIENT_BALANCE = 2;
-	AMOUNT_SHOULD_BE_GREATER_THAN_ZERO = 3;
-	INVALID_CURRENCY = 4;
- }
-
 
 service WalletService {
 	rpc deposit(Request) returns (APIResponse) {}
