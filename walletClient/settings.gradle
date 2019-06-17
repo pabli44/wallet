@@ -4,4 +4,4 @@ pluginManagement {
 	}
 }
 rootProject.name = 'walletClient'
-include "WalletProto"
+include ":walletProto"

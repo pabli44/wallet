@@ -2,6 +2,7 @@ plugins {
 	id 'org.springframework.boot' version '2.1.5.RELEASE'
 	id 'java'
 	id 'com.google.protobuf' version '0.8.8'
+	id 'idea'
 }
 
 apply plugin: 'io.spring.dependency-management'
@@ -44,7 +45,8 @@ dependencies {
     testImplementation "junit:junit:4.12"
     testImplementation "org.mockito:mockito-core:2.25.1"
     //compile project('walletProto')
-    implementation files("walletProto")
+    //implementation files("walletProto")
+    //classpath 'walletProto'
 }
 
 protobuf {
@@ -64,4 +66,17 @@ sourceSets {
             srcDirs 'build/generated/source/proto/main/java'
         }
     }
+}
+
+idea {
+    module {
+        sourceDirs += file("src/generated/main/java")
+        sourceDirs += file("src/generated/main/grpc")
+        generatedSourceDirs += file("src/generated/main/java")
+        generatedSourceDirs += file("src/generated/main/grpc")
+    }
+}
+
+jar {
+    enabled = true
 }

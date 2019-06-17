@@ -25,9 +25,9 @@ dependencies {
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 
 	compile "io.grpc:grpc-netty:${grpcVersion}"
-        compile "io.grpc:grpc-protobuf:${grpcVersion}"
-        compile "io.grpc:grpc-stub:${grpcVersion}"
-        compile group: 'javax.annotation', name: 'javax.annotation-api', version: '1.2'
+    compile "io.grpc:grpc-protobuf:${grpcVersion}"
+    compile "io.grpc:grpc-stub:${grpcVersion}"
+    compile group: 'javax.annotation', name: 'javax.annotation-api', version: '1.2'
 }
 
 apply plugin: 'com.google.protobuf'

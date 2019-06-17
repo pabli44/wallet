@@ -8,7 +8,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import io.grpc.Server;
 import io.grpc.ServerBuilder;
-//import com.pvelilla.
+//import com.pvelilla.walletProto.proto;
+
 
 @SpringBootApplication
 public class WalletServerApplication {
@@ -20,7 +21,7 @@ public class WalletServerApplication {
 	public void start() throws IOException {
 		int port = 8081;
 		server = ServerBuilder.forPort(port)
-				//.addService()
+//				.addService(new WalletServiceGrpc())
 				.build()
 				.start();
 				
